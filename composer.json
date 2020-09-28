@@ -1,0 +1,21 @@
+{
+  "name": "nolka/translation-loader-core",
+  "description": "Core of translations loader",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "nolka",
+      "email": "xternalx@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "~7.0",
+    "phpoffice/phpexcel": "~1.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "TranslationLoader\\": "src/"
+    }
+  }
+}

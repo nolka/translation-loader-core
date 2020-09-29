@@ -8,7 +8,7 @@ use PhpOffice\PhpSpreadsheet\Reader\Exception;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use TranslationLoader\Data\DataRow;
 use TranslationLoader\TranslationManager;
-use Translations\Exception\FileNotFoundException;
+use TranslationLoader\Exception\FileNotFoundException;
 
 /**
  * Used for reading translations from xlsx

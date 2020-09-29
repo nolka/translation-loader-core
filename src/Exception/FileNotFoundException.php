@@ -1,6 +1,6 @@
 <?php
 
-namespace Translations\Exception;
+namespace TranslationLoader\Exception;
 
 use Exception;
 

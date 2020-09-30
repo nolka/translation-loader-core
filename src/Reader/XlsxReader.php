@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace TranslationLoader\Reader;
 
 use Generator;
@@ -102,7 +104,7 @@ class XlsxReader extends BaseReader implements TranslationReaderInterface
      * Возвращает индекс столбца с исходными текстами в файле с переводами
      * @return int
      */
-    protected function getSourceTranslationId(): int
+    protected function getSourceTranslationId(): string
     {
         return array_search(static::CELL_SOURCE_NAME, $this->languageMap);
     }

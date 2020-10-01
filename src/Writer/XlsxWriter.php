@@ -17,10 +17,13 @@ use TranslationLoader\TranslationManager;
  */
 class XlsxWriter extends BaseWriter implements TranslationWriterInterface
 {
-    protected string $pathToFile;
+    /** @var string */
+    protected $pathToFile;
 
-    protected IWriter $writer;
-    protected Spreadsheet $sheet;
+    /** @var IWriter */
+    protected $writer;
+    /** @var Spreadsheet */
+    protected $sheet;
 
     /** @var array */
     protected $languageMap = [];

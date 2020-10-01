@@ -12,7 +12,8 @@ use TranslationLoader\TranslationManager;
  */
 class BaseReader
 {
-    protected TranslationManager $manager;
+    /** @var TranslationManager */
+    protected $manager;
 
     /**
      * BaseReader constructor.

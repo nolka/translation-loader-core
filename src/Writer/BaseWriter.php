@@ -13,7 +13,8 @@ use TranslationLoader\TranslationManager;
  */
 class BaseWriter
 {
-    protected TranslationManager $manager;
+    /** @var TranslationManager $manager */
+    protected $manager;
 
     /**
      * BaseWriter constructor.

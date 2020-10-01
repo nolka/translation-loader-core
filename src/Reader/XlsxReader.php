@@ -19,13 +19,13 @@ use TranslationLoader\Exception\FileNotFoundException;
 class XlsxReader extends BaseReader implements TranslationReaderInterface
 {
     /** @var string */
-    protected string $filePath;
+    protected $filePath;
     /** @var Spreadsheet */
-    protected Spreadsheet $spreadsheet;
+    protected $spreadsheet;
     /** @var array string[] */
-    protected array $errors = [];
+    protected $errors = [];
     /** @var array */
-    protected array $languageMap = [];
+    protected $languageMap = [];
 
     /**
      * XlsxReader constructor.

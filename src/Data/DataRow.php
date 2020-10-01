@@ -11,11 +11,11 @@ namespace TranslationLoader\Data;
 class DataRow
 {
     /** @var string Source lang code */
-    public string $sourceLangCode;
+    public $sourceLangCode;
     /** @var string Destination lang code */
-    public string $destLangCode;
+    public $destLangCode;
     /** @var string Source value */
-    public string $sourceValue;
+    public $sourceValue;
     /** @var string Translated value */
-    public string $destValue;
+    public $destValue;
 }

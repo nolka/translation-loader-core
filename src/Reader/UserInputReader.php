@@ -13,7 +13,7 @@ use TranslationLoader\Data\DataRow;
 class UserInputReader implements TranslationReaderInterface
 {
     /** @var DataRow Datarow for translation */
-    protected DataRow $dataRow;
+    protected $dataRow;
 
     /**
      * HardcodedReader constructor.

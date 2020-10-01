@@ -17,7 +17,7 @@ class TranslationManager
     const TRANSLATION_PREFIX = 'source';
 
     /** @var array keys are 2 char language code, value - language name */
-    protected array $langMap = [];
+    protected $langMap = [];
 
     public function __construct(array $langMap)
     {

@@ -24,4 +24,12 @@ class BaseWriter
     {
         $this->manager = $manager;
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function finalize(): void
+    {
+        // Not implemented
+    }
 }

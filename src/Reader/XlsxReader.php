@@ -83,7 +83,8 @@ class XlsxReader extends BaseReader implements TranslationReaderInterface
                 $dataRow = new DataRow();
                 $dataRow->sourceValue = $sourceValue;
                 $dataRow->sourceLangCode = $sourceLang;
-                $dataRow->destValue = trim($cell->getValue());
+                $cellValue = $cell->getValue();
+                $dataRow->destValue = empty($cellValue)? null: trim($cellValue);
                 $dataRow->destLangCode = $this->languageMap[$cellId];
 
                 yield $dataRow;

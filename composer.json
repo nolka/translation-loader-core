@@ -1,6 +1,7 @@
 {
   "name": "nolka/translation-loader-core",
   "description": "Core of translations loader",
+  "version": "0.1.1",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [

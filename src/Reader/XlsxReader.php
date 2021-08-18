@@ -54,12 +54,14 @@ class XlsxReader extends BaseReader implements TranslationReaderInterface
         foreach ($this->spreadsheet->getActiveSheet()->getRowIterator() as $rowId => $row) {
             if ($rowId == 1) {
                 foreach ($row->getCellIterator() as $cellId => $cell) {
-                    $langCode = $this->getLangCode($cell->getValue());
-                    if (!array_key_exists($langCode, $this->getAllowedLangs())) {
-                        $this->addError("Unknown language skipped: {$langCode}");
-                        continue;
+                    if ($cell->getValue()) {
+                        $langCode = $this->getLangCode($cell->getValue());
+                        if (!array_key_exists($langCode, $this->getAllowedLangs())) {
+                            $this->addError("Unknown language skipped: {$langCode}");
+                            continue;
+                        }
+                        $this->languageMap[$cellId] = $this->getLangCode($cell->getValue());
                     }
-                    $this->languageMap[$cellId] = $this->getLangCode($cell->getValue());
                 }
                 continue;
             }
@@ -69,7 +71,7 @@ class XlsxReader extends BaseReader implements TranslationReaderInterface
             foreach ($row->getCellIterator() as $cellId => $cell) {
 
                 if ($cellId == $sourceTranslationIdx) {
-                    $sourceValue = trim($cell->getValue());
+                    $sourceValue = trim($cell->getValue() ?: '');
                     $sourceLang = $this->languageMap[$cellId];
                     continue;
                 }
